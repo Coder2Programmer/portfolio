@@ -1,18 +1,300 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dong's Portfolio</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/css/font-style.css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
-  </body>
+    <!-- End #mobile-menu-toggle -->
+
+    <header>
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#education">Education</a>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
+
+    <div id="lead">
+        <div id="lead-content">
+            <h1>Dong Wang</h1>
+            <h2>Software Engineer Intern</h2>
+            <a href="#" class="btn-rounded-white">Download Resume</a>
+        </div>
+        <!-- End #lead-content -->
+
+        <div id="lead-overlay"></div>
+
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">About Me</h2>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        Dong Wang, a computer science student who studying for master's degree. I am 
+                        interested in machine learning, big data, distributed system and etc., in addition, 
+                        also involved in other fields.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #about -->
+
+    <div id="experience" class="background-alt">
+        <h2 class="heading">Experience</h2>
+        <div id="experience-timeline">
+            <div data-date="October 2019 – July 2020">
+                <h3>Microsoft</h3>
+                <h4>Software Engineer Intern</h4>
+                <p>
+                    Working at Bing Search as a software engineer intern, and complete three project. 
+                    Firstly, I accomplished the development of minimum viable product of automated 
+                    office system using C# and Windows OS API. Secondly, I completed PDF text extraction
+                    via deep learning, then built a simple knowledge graph. At last, I worked on CV, and
+                    do some work of object detection.
+                </p>
+            </div>
+
+            <div data-date="May 2019 – October 2019">
+                <h3>Bytedance</h3>
+                <h4>Software Engineer Intern</h4>
+                <p>
+                    Working at Ads as a software engineer intern, and complete two project. At first, 
+                    I developed advertising information matrices, dimension monitoring and analysis 
+                    function module, therefore solved the problem of data analysis. Apart from that, 
+                    I developed and deployed monitoring service and change the department's tranditional
+                    monitoring data flow using kafka to OpenTSDB, therefore improved stability and relibility
+                    of service.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <!-- End #experience -->
+
+    <div id="education">
+        <h2 class="heading">Education</h2>
+        <div class="education-block">
+            <h3>Beihang University</h3>
+            <span class="education-date">September 2018 - January 2021</span>
+            <h4>Master of Science in Computer Science</h4>
+            <p>
+                Studying for master's degree.
+            </p>
+            <ul>
+                <li>
+                    Freshman postgraduate scholarship, First prize
+                </li>
+                <li>
+                    Postgraduate scholarship of BUAA, First prize
+                </li>
+            </ul>
+        </div>
+        <!-- End .education-block -->
+
+        <div class="education-block">
+            <h3>Hefei University of Technology</h3>
+            <span class="education-date">September 2014 - June 2019</span>
+            <h4>Bachelor of Science in Mechanics</h4>
+            <p>Studying for bachelor's degree.</p>
+            <ul>
+                <li>
+                    Anhui college student mechanics competition, First prize
+                </li>
+                <li>
+                    China Undergraduate Mathematical Contest in Modeling, First prize
+                </li>
+                <li>
+                    The Chinese Mathematics Competitions, First prize
+                </li>
+            </ul>
+        </div>
+        <!-- End .education-block -->
+    </div>
+    <!-- End #education -->
+
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Projects</h2>
+        <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Detection tool for Block-chain Contract</h3>
+                        <p>
+                            Currently, block-chains do not only have the function of electronic currency. 
+                            Block-chain can be a new application through smart contracts, besides, it can be
+                            used as a system platform on which new applications can be developed. However, smart contracts, 
+                            as a basis for application, often have security risks and vulnerabilities due to lack 
+                            of experience of developers. With automated testing tools, developers can easily detect 
+                            and locate vulnerabilities in smart contracts. 
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Wireless communication method of STM32</h3>
+                        <p>
+                            In the implementation of engineering (civil construction, bridges, etc.), a large number of 
+                            sensors are required to measure the corresponding data (distance, stress, etc.) and transmit 
+                            them to a computer for analysis. Traditional manual measurement has the disadvantages of high 
+                            labor cost and danger. Using the single-chip embedded with the micro-core operating system, 
+                            the data acquisition and processing of the sensor can be realized for a long time, and transmitted 
+                            to the computer or mobile phone through the WiFi module. Monitoring and analysis. 
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Android game automation detection tool</h3>
+                        <p>
+                            The current Android game development cycle is short and the test time is tight. The traditional 
+                            manual test method has high labor cost and long test time. The automated test software developed 
+                            by the team used the manually labeled game screenshots to train the model in the early stage, and 
+                            then used the model to complete the automated test of the newly developed game and found the bugs. 
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+            </div>
+        </div>
+    </div>
+    <!-- End #projects -->
+
+    <div id="skills">
+        <h2 class="heading">Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>C</li>
+            <li>C#</li>
+            <li>C++</li>
+            <li>Machine Learning</li>
+            <li>Distributed System</li>
+        </ul>
+    </div>
+    <!-- End #skills -->
+
+    <div id="contact">
+        <h2>Get in Touch</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/wangdong.donald@gmail.com">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; 2020 YOUR NAME
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/Coder2Programmer" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/dong-wang-1427a9188/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
 </html>
